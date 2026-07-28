@@ -36,7 +36,7 @@ function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
 export function Hero({ onOpenAchievements }: { onOpenAchievements?: () => void }) {
   const { name, hook, supporting, links } = portfolioData.hero;
 
-  const handleSplineMouseDown = (e: any) => {
+  const handleSplineMouseDown = (e: { target?: { name?: string } }) => {
     console.log("Spline object clicked:", e.target?.name);
     // Open the achievements gallery immediately on click
     if (onOpenAchievements) {
@@ -59,7 +59,6 @@ export function Hero({ onOpenAchievements }: { onOpenAchievements?: () => void }
         <Spline 
           scene="https://prod.spline.design/4TEPwiQ6kgOYvssv/scene.splinecode" 
           onMouseDown={handleSplineMouseDown}
-          onSplineMouseDown={handleSplineMouseDown}
         />
       </div>
 
