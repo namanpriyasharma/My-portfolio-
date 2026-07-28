@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #09090b; /* Zinc 950 */
+  --color-foreground: #fafafa; /* Zinc 50 */
+  --color-muted: #27272a; /* Zinc 800 */
+  --color-muted-foreground: #a1a1aa; /* Zinc 400 */
+  --color-accent: #38bdf8; /* Sky 400 */
+  
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-outfit);
+
+  --animate-fade-in-up: fade-in-up 0.7s ease-out forwards;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+  letter-spacing: -0.025em;
+}
+
+::selection {
+  background-color: rgba(56, 189, 248, 0.3); /* Accent color with opacity */
+  color: #ffffff;
+}
