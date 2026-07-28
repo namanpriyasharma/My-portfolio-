@@ -42,6 +42,9 @@ export function About() {
       {/* FloatingLines Background */}
       <div className="absolute inset-0 z-0 opacity-40">
         <FloatingLines 
+          linesGradient={undefined}
+          topWavePosition={undefined}
+          middleWavePosition={undefined}
           enabledWaves={['top', 'middle', 'bottom']}
           lineCount={[10, 15, 20]}
           lineDistance={[8, 6, 4]}
